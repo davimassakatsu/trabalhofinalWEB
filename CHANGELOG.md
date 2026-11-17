@@ -24,6 +24,13 @@ e o projeto usa [Versionamento Semântico](https://semver.org/lang/pt-BR/):
 
 ---
 
+## [2.2.0] — 2026-11-17
+
+### Adicionado
+- Prévia ao vivo do **Memórias Fujimura** no card de projetos, com o site
+  publicado na Vercel (`memoriasfujimura.vercel.app`) e o modo "Clique para interagir".
+- Botão principal do Memórias Fujimura agora leva ao site ao vivo.
+
 ## [2.1.0] — 2026-11-17
 
 ### Adicionado

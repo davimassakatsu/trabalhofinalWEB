@@ -1243,3 +1243,18 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .live-frame, .live-fallback { transition: none; }
 }
+
+/* ---- Memórias Fujimura: selo de lançamento sobre a prévia ao vivo ---- */
+.xp-card .book-stage__ticket { z-index: 4; transition: opacity 0.5s var(--ease-out), transform 0.8s var(--ease-out); }
+.xp-card.is-live-active .book-stage__ticket { opacity: 0; transform: translateY(-10px); }
+
+#memorias-fujimura .book-stage__ticket {
+  top: 92px;
+  right: 48px;
+  bottom: auto;
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  #memorias-fujimura .book-stage__ticket { top: 72px; right: 28px; }
+}

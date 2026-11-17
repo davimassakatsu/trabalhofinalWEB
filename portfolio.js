@@ -3,7 +3,7 @@
 // Versão: veja PORTFOLIO_VERSION abaixo e o CHANGELOG.md
 // =============================================================
 
-const PORTFOLIO_VERSION = '2.1.0';
+const PORTFOLIO_VERSION = '2.2.0';
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;

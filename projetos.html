@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Projetos do Portifólio Davi Massakatsu: FUJIFY, VUE Sport Wear, Memórias Fujimura, GeoAI e GREENFALL.">
-  <meta name="version" content="2.1.0">
+  <meta name="version" content="2.2.0">
   <title>Projetos — Portifólio Davi Massakatsu</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="motion.css">
@@ -65,7 +65,7 @@
   <nav class="nav" role="navigation" aria-label="Navegação principal">
     <a href="index.html" class="nav__logo" aria-label="Portifólio Davi Massakatsu — início">
       <span class="nav__logo-mark" aria-hidden="true">DM</span>
-      <span>Portifólio <span>Davi Massakatsu</span><small data-version>v2.1.0</small></span>
+      <span>Portifólio <span>Davi Massakatsu</span><small data-version>v2.2.0</small></span>
     </a>
     <ul class="nav__links">
       <li><a href="index.html">Sobre</a></li>
@@ -98,7 +98,7 @@
             <p class="kicker kicker--left" data-scramble>Destaques / GitHub</p>
             <h2 class="section__title">Projetos em destaque</h2>
           </div>
-          <p class="showcase__count"><b>03</b> PROJETOS · ATUALIZADO EM <span data-version>v2.1.0</span></p>
+          <p class="showcase__count"><b>03</b> PROJETOS · ATUALIZADO EM <span data-version>v2.2.0</span></p>
         </div>
 
         <!-- ===== 01 — FUJIFY ===== -->
@@ -200,16 +200,26 @@
 
         <!-- ===== 03 — MEMÓRIAS FUJIMURA ===== -->
         <article class="xp-card spotlight reveal" data-tilt="4" id="memorias-fujimura" data-cursor="explorar">
-          <div class="xp-card__visual" aria-hidden="true">
-            <div class="book-stage">
-              <span class="book-stage__kanji">藤村</span>
-              <div class="book">
-                <div class="book__spine"></div>
-                <div class="book__pages"></div>
-                <div class="book__cover" style="background-image: url('img/projetos/memorias-fujimura-capa.jpg');"></div>
+          <div class="xp-card__visual">
+            <div class="mock mock--live">
+              <div class="mock__bar" aria-hidden="true">
+                <i></i><i></i><i></i>
+                <span class="mock__url"><span class="live-dot"></span>memoriasfujimura.vercel.app</span>
               </div>
-              <div class="book-stage__ticket"><b>Lançamento</b>19/12/2026 · Londrina</div>
+              <div class="mock__screen" data-live-preview style="background:#0d0d16;">
+                <!-- Prévia estática enquanto o site real carrega -->
+                <div class="live-fallback book-stage" aria-hidden="true">
+                  <span class="book-stage__kanji">藤村</span>
+                </div>
+                <!-- Site real publicado na Vercel -->
+                <iframe class="live-frame" data-src="https://memoriasfujimura.vercel.app" title="Site Memórias Fujimura ao vivo" loading="lazy" tabindex="-1"></iframe>
+                <button class="live-toggle" type="button" data-live-toggle>
+                  <span class="live-dot"></span><span class="live-toggle__label">Clique para interagir</span>
+                </button>
+              </div>
             </div>
+
+            <div class="book-stage__ticket" aria-hidden="true"><b>Lançamento</b>19/12/2026 · Londrina</div>
           </div>
 
           <div class="xp-card__body">
@@ -231,10 +241,10 @@
               <li>Mapa interativo “A travessia” do Japão ao Brasil, construído com d3-geo e TopoJSON.</li>
               <li>Animações de rolagem com GSAP e rolagem suave com Lenis.</li>
               <li>Seções de capítulos, depoimentos, autoras e lançamento com arquivo de agenda.</li>
-              <li>Site estático exportado pelo Next.js, com conteúdo editável em um único arquivo.</li>
+              <li>Site estático exportado pelo Next.js e publicado na Vercel — a janela ao lado é o site real.</li>
             </ul>
             <div class="xp-card__actions">
-              <a class="btn btn--primary" href="https://github.com/davimassakatsu-eng/memoriasfujimura" target="_blank" rel="noopener noreferrer">↗ Ver no GitHub</a>
+              <a class="btn btn--primary" href="https://memoriasfujimura.vercel.app" target="_blank" rel="noopener noreferrer">↗ Ver site ao vivo</a>
               <button class="btn btn--ghost" type="button" data-expand aria-expanded="false" aria-controls="memorias-details">
                 <span class="label">Ver detalhes</span> <span class="chev">⌄</span>
               </button>
@@ -304,7 +314,7 @@
 
   <footer>
     <p>Feito por <span>DAVI MASSAKATSU</span> &mdash; 2026</p>
-    <a class="version-badge" href="CHANGELOG.md" title="Histórico de versões"><span class="live-dot"></span><span data-version>v2.1.0</span></a>
+    <a class="version-badge" href="CHANGELOG.md" title="Histórico de versões"><span class="live-dot"></span><span data-version>v2.2.0</span></a>
   </footer>
 
   <script src="portfolio.js"></script>
