@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dev Portfolio — Contato</title>
+  <meta name="version" content="2.0.0">
+  <title>Contato — Portifólio Davi Massakatsu</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="motion.css">
   <style>
     /* Estilos extras para a página de contato */
 
@@ -53,10 +55,6 @@
       animation: pulse-dot 2s infinite;
     }
 
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.4; }
-    }
 
     /* Mapa / localização visual */
     .location-badge {
@@ -75,24 +73,25 @@
 
   <!-- NAV -->
   <nav class="nav" role="navigation" aria-label="Navegação principal">
-    <a href="index.html" class="nav__logo">&lt;<span>Dev</span>/&gt;</a>
+    <a href="index.html" class="nav__logo" aria-label="Portifólio Davi Massakatsu — início">
+      <span class="nav__logo-mark" aria-hidden="true">DM</span>
+      <span>Portifólio <span>Davi Massakatsu</span><small data-version>v2.0.0</small></span>
+    </a>
     <ul class="nav__links">
       <li><a href="index.html">Sobre</a></li>
       <li><a href="projetos.html">Projetos</a></li>
       <li><a href="contato.html">Contato</a></li>
     </ul>
-    <a href="docs\CURRICULO DAVI MASSAKATSU.pdf" class="nav__resume" download>&#8659; <span>Currículo</span></a>
+    <a href="docs/CURRICULO DAVI MASSAKATSU.pdf" class="nav__resume" download>&#8659; <span>Currículo</span></a>
     <button id="nav-toggle" class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <!-- HERO MINI -->
-  <header class="hero" style="min-height: 42vh; padding-top: 100px;">
+  <header class="hero" style="min-height: 52vh; padding-top: 120px;">
     <span class="hero__eyebrow">// vamos conversar</span>
-    <h1 class="hero__title" style="font-size: clamp(2rem, 5vw, 3.8rem);">
-      Entre em contato<span class="dot">.</span>
-    </h1>
+    <h1 class="hero__title text-gradient" data-split style="font-size: clamp(2.2rem, 6vw, 4.2rem);">Entre em contato.</h1>
     <p class="hero__desc">
       Tenho interesse em projetos freelance, oportunidades em equipe e mentorias.
       Me manda uma mensagem!
@@ -116,7 +115,7 @@
           </p>
 
           <!-- Cards de contato direto -->
-          <div class="contact-card">
+          <div class="contact-card spotlight">
             <h3>E-mail</h3>
             <p>
               <a href="mailto:davi.massakatsu@edu.unifil.com.br" class="social-link" style="border:none; padding: 0; background: none; margin-top: 6px;">
@@ -125,7 +124,7 @@
             </p>
           </div>
 
-          <div class="contact-card">
+          <div class="contact-card spotlight">
             <h3>LinkedIn</h3>
             <p>
               <a href="https://www.linkedin.com/in/davi-massakatsu" target="_blank" rel="noopener noreferrer" class="social-link" style="border:none; padding: 0; background: none; margin-top: 6px;">
@@ -134,7 +133,7 @@
             </p>
           </div>
 
-          <div class="contact-card">
+          <div class="contact-card spotlight">
             <h3>GitHub</h3>
             <p>
               <a href="https://github.com/davimassakatsu" target="_blank" rel="noopener noreferrer" class="social-link" style="border:none; padding: 0; background: none; margin-top: 6px;">
@@ -226,7 +225,8 @@
   </main>
 
   <footer>
-    <p>Feito por DAVI MASSAKATSU &mdash; 2026</p>
+    <p>Feito por <span>DAVI MASSAKATSU</span> &mdash; 2026</p>
+    <a class="version-badge" href="CHANGELOG.md" title="Histórico de versões"><span class="live-dot"></span><span data-version>v2.0.0</span></a>
   </footer>
 
   <script src="portfolio.js"></script>
