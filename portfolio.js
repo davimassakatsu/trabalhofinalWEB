@@ -3,7 +3,7 @@
 // Versão: veja PORTFOLIO_VERSION abaixo e o CHANGELOG.md
 // =============================================================
 
-const PORTFOLIO_VERSION = '2.0.0';
+const PORTFOLIO_VERSION = '2.1.0';
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -580,6 +580,7 @@ const scramble = (function () {
     const book = card.querySelector('.book');
 
     card.addEventListener('pointermove', (e) => {
+      if (card.classList.contains('is-live-active')) return;
       const r = card.getBoundingClientRect();
       const nx = (e.clientX - r.left) / r.width - 0.5;   // -0.5..0.5
       const ny = (e.clientY - r.top) / r.height - 0.5;
@@ -664,6 +665,46 @@ const scramble = (function () {
         b.style.setProperty('--h', (0.08 + wave * energy * 0.92).toFixed(2));
       });
     }, 140);
+  });
+})();
+
+
+// =============================================
+// 11b. PRÉVIA AO VIVO — carrega o site publicado (Vercel) num
+//      iframe só quando o card chega perto da tela
+// =============================================
+(function initLivePreviews() {
+  document.querySelectorAll('[data-live-preview]').forEach(screen => {
+    const frame = screen.querySelector('.live-frame');
+    const toggle = screen.querySelector('[data-live-toggle]');
+    const label = toggle && toggle.querySelector('.live-toggle__label');
+    const card = screen.closest('.xp-card');
+    if (!frame) return;
+
+    // escala o "desktop" de 1280px para a largura real da janela
+    const fit = () => screen.style.setProperty('--live-scale', (screen.clientWidth / 1280).toFixed(4));
+    fit();
+    new ResizeObserver(fit).observe(screen);
+
+    frame.addEventListener('load', () => {
+      if (frame.src) screen.classList.add('is-loaded');
+    });
+
+    const io = new IntersectionObserver(([e]) => {
+      if (!e.isIntersecting) return;
+      frame.src = frame.dataset.src;
+      io.disconnect();
+    }, { rootMargin: '300px' });
+    io.observe(screen);
+
+    if (!toggle) return;
+    toggle.addEventListener('click', () => {
+      const on = screen.classList.toggle('is-interactive');
+      card && card.classList.toggle('is-live-active', on);
+      frame.tabIndex = on ? 0 : -1;
+      label.textContent = on ? 'Sair do modo interativo' : 'Clique para interagir';
+      if (on) frame.focus();
+    });
   });
 })();
 

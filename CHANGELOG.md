@@ -24,6 +24,15 @@ e o projeto usa [Versionamento Semântico](https://semver.org/lang/pt-BR/):
 
 ---
 
+## [2.1.0] — 2026-11-17
+
+### Adicionado
+- Prévia ao vivo da **VUE** no card de projetos: o site publicado na Vercel
+  (`vue-sportwear.vercel.app`) aparece dentro da janela de navegador do card,
+  carregado só quando o card chega perto da tela.
+- Botão "Clique para interagir" para navegar no site sem sair do portfólio.
+- Botão principal da VUE agora leva ao site ao vivo (o repositório é privado).
+
 ## [2.0.0] — 2026-11-17
 
 ### Adicionado

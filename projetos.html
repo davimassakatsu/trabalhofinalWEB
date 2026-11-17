@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Projetos do Portifólio Davi Massakatsu: FUJIFY, VUE Sport Wear, Memórias Fujimura, GeoAI e GREENFALL.">
-  <meta name="version" content="2.0.0">
+  <meta name="version" content="2.1.0">
   <title>Projetos — Portifólio Davi Massakatsu</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="motion.css">
@@ -65,7 +65,7 @@
   <nav class="nav" role="navigation" aria-label="Navegação principal">
     <a href="index.html" class="nav__logo" aria-label="Portifólio Davi Massakatsu — início">
       <span class="nav__logo-mark" aria-hidden="true">DM</span>
-      <span>Portifólio <span>Davi Massakatsu</span><small data-version>v2.0.0</small></span>
+      <span>Portifólio <span>Davi Massakatsu</span><small data-version>v2.1.0</small></span>
     </a>
     <ul class="nav__links">
       <li><a href="index.html">Sobre</a></li>
@@ -98,7 +98,7 @@
             <p class="kicker kicker--left" data-scramble>Destaques / GitHub</p>
             <h2 class="section__title">Projetos em destaque</h2>
           </div>
-          <p class="showcase__count"><b>03</b> PROJETOS · ATUALIZADO EM <span data-version>v2.0.0</span></p>
+          <p class="showcase__count"><b>03</b> PROJETOS · ATUALIZADO EM <span data-version>v2.1.0</span></p>
         </div>
 
         <!-- ===== 01 — FUJIFY ===== -->
@@ -141,18 +141,29 @@
 
         <!-- ===== 02 — VUE SPORT WEAR ===== -->
         <article class="xp-card xp-card--flip spotlight reveal" data-tilt="4" id="vue" data-cursor="explorar">
-          <div class="xp-card__visual" aria-hidden="true">
-            <div class="mock">
-              <div class="mock__bar"><i></i><i></i><i></i><span class="mock__url">vuesportwear.com.br</span></div>
-              <div class="mock__screen vue-screen">
-                <svg class="topo"></svg>
-                <div class="vue-screen__copy">
-                  <img class="vue-logo" src="img/projetos/vue-symbol.svg" alt="">
-                  <h4>Performance para <em>viver experiências.</em></h4>
-                  <div class="vue-screen__chips">
-                    <span>OUTDOOR</span><span>TEAM</span><span>PRO</span>
+          <div class="xp-card__visual">
+            <div class="mock mock--live">
+              <div class="mock__bar" aria-hidden="true">
+                <i></i><i></i><i></i>
+                <span class="mock__url"><span class="live-dot"></span>vue-sportwear.vercel.app</span>
+              </div>
+              <div class="mock__screen vue-screen" data-live-preview>
+                <!-- Prévia estática: aparece enquanto o site real carrega (ou se falhar) -->
+                <div class="live-fallback" aria-hidden="true">
+                  <svg class="topo"></svg>
+                  <div class="vue-screen__copy">
+                    <img class="vue-logo" src="img/projetos/vue-symbol.svg" alt="">
+                    <h4>Performance para <em>viver experiências.</em></h4>
+                    <div class="vue-screen__chips">
+                      <span>OUTDOOR</span><span>TEAM</span><span>PRO</span>
+                    </div>
                   </div>
                 </div>
+                <!-- Site real publicado na Vercel, renderizado como desktop e reduzido -->
+                <iframe class="live-frame" data-src="https://vue-sportwear.vercel.app" title="Site da VUE Sport Wear ao vivo" loading="lazy" tabindex="-1"></iframe>
+                <button class="live-toggle" type="button" data-live-toggle>
+                  <span class="live-dot"></span><span class="live-toggle__label">Clique para interagir</span>
+                </button>
               </div>
             </div>
           </div>
@@ -176,10 +187,10 @@
               <li>Hero com imagem convertida em partículas (WebGL2) que reagem ao mouse.</li>
               <li>Grafismo de linhas topográficas e títulos que se montam ao rolar (GSAP + Lenis).</li>
               <li>Páginas de segmento (pesca/turismo, equipes, empresas), vitrine com filtro e orçamento em 3 etapas.</li>
-              <li>Pensado para tráfego orgânico (SEO) e deploy na Vercel.</li>
+              <li>Pensado para tráfego orgânico (SEO) e publicado na Vercel — a janela ao lado é o site real.</li>
             </ul>
             <div class="xp-card__actions">
-              <a class="btn btn--primary" href="https://github.com/davimassakatsu-eng/vue-sportwear" target="_blank" rel="noopener noreferrer">↗ Ver no GitHub</a>
+              <a class="btn btn--primary" href="https://vue-sportwear.vercel.app" target="_blank" rel="noopener noreferrer">↗ Ver site ao vivo</a>
               <button class="btn btn--ghost" type="button" data-expand aria-expanded="false" aria-controls="vue-details">
                 <span class="label">Ver detalhes</span> <span class="chev">⌄</span>
               </button>
@@ -293,7 +304,7 @@
 
   <footer>
     <p>Feito por <span>DAVI MASSAKATSU</span> &mdash; 2026</p>
-    <a class="version-badge" href="CHANGELOG.md" title="Histórico de versões"><span class="live-dot"></span><span data-version>v2.0.0</span></a>
+    <a class="version-badge" href="CHANGELOG.md" title="Histórico de versões"><span class="live-dot"></span><span data-version>v2.1.0</span></a>
   </footer>
 
   <script src="portfolio.js"></script>
