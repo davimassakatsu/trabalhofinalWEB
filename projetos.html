@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Projetos do Portifólio Davi Massakatsu: FUJIFY, VUE Sport Wear, Memórias Fujimura, GeoAI e GREENFALL.">
-  <meta name="version" content="2.2.0">
+  <meta name="version" content="2.3.0">
   <title>Projetos — Portifólio Davi Massakatsu</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="motion.css">
@@ -65,7 +65,7 @@
   <nav class="nav" role="navigation" aria-label="Navegação principal">
     <a href="index.html" class="nav__logo" aria-label="Portifólio Davi Massakatsu — início">
       <span class="nav__logo-mark" aria-hidden="true">DM</span>
-      <span>Portifólio <span>Davi Massakatsu</span><small data-version>v2.2.0</small></span>
+      <span>Portifólio <span>Davi Massakatsu</span><small data-version>v2.3.0</small></span>
     </a>
     <ul class="nav__links">
       <li><a href="index.html">Sobre</a></li>
@@ -98,40 +98,60 @@
             <p class="kicker kicker--left" data-scramble>Destaques / GitHub</p>
             <h2 class="section__title">Projetos em destaque</h2>
           </div>
-          <p class="showcase__count"><b>03</b> PROJETOS · ATUALIZADO EM <span data-version>v2.2.0</span></p>
+          <p class="showcase__count"><b>03</b> PROJETOS · ATUALIZADO EM <span data-version>v2.3.0</span></p>
         </div>
 
         <!-- ===== 01 — FUJIFY ===== -->
-        <!-- TODO: completar descrição, stack e link do FUJIFY (repositório não encontrado nas contas do GitHub) -->
         <article class="xp-card spotlight reveal" data-tilt="4" id="fujify" data-cursor="explorar">
-          <div class="xp-card__visual" aria-hidden="true">
-            <div class="fujify-screen">
-              <span class="fujify-ring"></span>
-              <span class="fujify-ring"></span>
-              <span class="fujify-ring"></span>
-              <div class="eq"></div>
-              <span class="fujify-word" data-text="FUJIFY">FUJIFY</span>
+          <div class="xp-card__visual">
+            <div class="mock mock--live">
+              <div class="mock__bar" aria-hidden="true">
+                <i></i><i></i><i></i>
+                <span class="mock__url"><span class="live-dot"></span>agendapro-hazel.vercel.app</span>
+              </div>
+              <div class="mock__screen" data-live-preview style="background:#09090b;">
+                <!-- Prévia estática enquanto o site real carrega -->
+                <div class="live-fallback" aria-hidden="true">
+                  <div class="fujify-screen">
+                    <span class="fujify-ring"></span>
+                    <span class="fujify-ring"></span>
+                    <span class="fujify-ring"></span>
+                    <div class="eq"></div>
+                    <span class="fujify-word" data-text="FUJIFY">FUJIFY</span>
+                  </div>
+                </div>
+                <!-- Site real publicado na Vercel -->
+                <iframe class="live-frame" data-src="https://agendapro-hazel.vercel.app" title="Site do Fujify ao vivo" loading="lazy" tabindex="-1"></iframe>
+                <button class="live-toggle" type="button" data-live-toggle>
+                  <span class="live-dot"></span><span class="live-toggle__label">Clique para interagir</span>
+                </button>
+              </div>
             </div>
           </div>
 
           <div class="xp-card__body">
             <span class="xp-card__index"><b>01</b> / 03</span>
             <div class="project-card__tags">
-              <span class="tag">Web</span>
-              <span class="tag">GitHub</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">SaaS</span>
+              <span class="tag">Agendamento</span>
             </div>
             <h3 class="xp-card__title" data-scramble>FUJIFY</h3>
-            <p class="xp-card__subtitle">// projeto autoral</p>
+            <p class="xp-card__subtitle">// sistema de agendamento para clínicas</p>
             <p class="xp-card__desc">
-              Projeto autoral desenvolvido e versionado no GitHub, com foco em interface
-              moderna e experiência interativa.
+              Plataforma de agendamento para clínicas odontológicas e de estética. Reúne agenda,
+              recepção e equipe num só lugar: sem horários sobrepostos, sem planilha e sem
+              correria no balcão.
             </p>
             <ul class="xp-card__features" id="fujify-details">
-              <li>Código versionado com Git e GitHub.</li>
-              <li>Interface pensada para ser direta e responsiva.</li>
+              <li>Agenda sem conflitos: o banco de dados impede dois atendimentos no mesmo profissional ou cadeira.</li>
+              <li>Horários livres calculados na hora, contando duração do procedimento, higienização, folgas e cadeiras.</li>
+              <li>Recepção em um toque (chegou → em atendimento → concluído), com remarcar e cancelar em dois cliques.</li>
+              <li>Acessos por papel (dono, administração, recepção, profissional) e várias clínicas numa mesma conta.</li>
+              <li>Publicado na Vercel — a janela ao lado é o sistema real.</li>
             </ul>
             <div class="xp-card__actions">
-              <a class="btn btn--primary" href="https://github.com/davimassakatsu-eng" target="_blank" rel="noopener noreferrer">↗ Ver no GitHub</a>
+              <a class="btn btn--primary" href="https://agendapro-hazel.vercel.app" target="_blank" rel="noopener noreferrer">↗ Ver site ao vivo</a>
               <button class="btn btn--ghost" type="button" data-expand aria-expanded="false" aria-controls="fujify-details">
                 <span class="label">Ver detalhes</span> <span class="chev">⌄</span>
               </button>
@@ -314,7 +334,7 @@
 
   <footer>
     <p>Feito por <span>DAVI MASSAKATSU</span> &mdash; 2026</p>
-    <a class="version-badge" href="CHANGELOG.md" title="Histórico de versões"><span class="live-dot"></span><span data-version>v2.2.0</span></a>
+    <a class="version-badge" href="CHANGELOG.md" title="Histórico de versões"><span class="live-dot"></span><span data-version>v2.3.0</span></a>
   </footer>
 
   <script src="portfolio.js"></script>

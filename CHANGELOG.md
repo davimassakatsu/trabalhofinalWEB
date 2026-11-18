@@ -24,6 +24,19 @@ e o projeto usa [Versionamento Semântico](https://semver.org/lang/pt-BR/):
 
 ---
 
+## [2.3.0] — 2026-11-17
+
+### Adicionado
+- Prévia ao vivo do **FUJIFY** no card de projetos, com o sistema publicado na
+  Vercel (`agendapro-hazel.vercel.app`) e o modo "Clique para interagir".
+
+### Alterado
+- Descrição do FUJIFY reescrita: sistema de agendamento para clínicas
+  odontológicas e de estética, com detalhes das funcionalidades e novas tags.
+- Botão principal do FUJIFY agora leva ao site ao vivo.
+- E-mail de contato atualizado para `dmfpro18@gmail.com` (início e contato).
+- Currículo em PDF atualizado.
+
 ## [2.2.0] — 2026-11-17
 
 ### Adicionado
